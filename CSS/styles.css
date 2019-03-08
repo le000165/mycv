@@ -6,10 +6,15 @@ body {
 }
 
 h1 {
-  color: #66bfbf;
-  margin: 50px auto 100px auto;
-  font-size: 5.625rem;
-  font-family: "Rochester", cursive;
+  color: #4a4a4a;
+  margin: 50px auto 0 auto;
+  font-size: 4.625rem;
+  font-weight: 400;
+  font-family: Nunito, sans-serif;
+}
+
+span {
+  font-size: 7.625rem;
 }
 
 h2 {
@@ -19,6 +24,10 @@ h2 {
   /*1rem is 16px*/
   font-weight: normal;
   padding-bottom: 10px;
+}
+
+.under-name {
+  font-size: 1.5rem;
 }
 
 h3 {
@@ -57,7 +66,7 @@ a:hover {
 
 /* Navigation container */
 .navigation-container {
-  background-color: #e4f9f5;
+  background-color: #dbe9b7;
   position: relative;
   padding-top: 60px;
   padding-bottom: 70px;
@@ -89,7 +98,7 @@ a:hover {
 
 .top-container {
   padding-top: 100px;
-  background-color: #e4f9f5;
+  background-color: #dbe9b7;
   position: relative;
 }
 
@@ -103,7 +112,17 @@ a:hover {
 .bottom-container {
   background-color: #66bfbf;
   padding: 50px 0 20px;
+  color: ;
 }
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
 
 /* 
 Top container */
@@ -134,6 +153,25 @@ Top container */
   text-align: left;
 }
 
+/* simon project */
+.skill-row a {
+  text-decoration: none;
+  position: relative;
+  left: 40px;
+  width: 20%;
+}
+
+.more-width {
+  width: 53%;
+  padding-bottom: 20px;
+}
+
+.simon-img {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+
 .code-img {
   width: 25%;
   float: left;
@@ -160,13 +198,11 @@ Top container */
   position: relative;
   top: 30px;
   transition: all 0.6s ease 0s;
-
 }
 
 .btn:hover {
   background: #11999e;
   text-decoration: none;
-
 }
 
 .contact-me {

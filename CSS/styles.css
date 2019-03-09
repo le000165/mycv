@@ -112,7 +112,6 @@ a:hover {
 .bottom-container {
   background-color: #66bfbf;
   padding: 50px 0 20px;
-  color: ;
 }
 
 .fa {
@@ -122,7 +121,6 @@ a:hover {
   text-align: center;
   text-decoration: none;
 }
-
 
 /* 
 Top container */
@@ -218,4 +216,53 @@ Top container */
 .contact-message {
   width: 40%;
   margin: 40px auto;
+}
+
+/* btn email */
+.btn-email:link,
+.btn-email:visited {
+  border: 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+  animation: moveInBottom 1s ease-out 0.9s;
+  animation-fill-mode: backwards;
+}
+
+.btn-email:hover {
+  transform: translateY(-3px);
+  /* x y blur color */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #66bfbf;
+}
+
+.btn-email:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* using pseudo class ::after , and putting it behind the button element*/
+.btn-email::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  /* references by the relative element which is the button */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* define the postion of the button, one on top of another */
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn-email::after {
+  background-color: #66bfbf;
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }

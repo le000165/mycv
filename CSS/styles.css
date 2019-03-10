@@ -10,11 +10,13 @@ h1 {
   margin: 50px auto 0 auto;
   font-size: 4.625rem;
   font-weight: 400;
-  font-family: Nunito, sans-serif;
+  font-family: "Courier New", sans-serif;
+  display: inline-block;
 }
 
-span {
+.curly-braces {
   font-size: 7.625rem;
+  color: #ee4266;
 }
 
 h2 {
@@ -265,4 +267,35 @@ Top container */
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.12em solid #007880; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0; /* Adjust as needed */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #007880;
+  }
 }

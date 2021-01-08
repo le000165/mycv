@@ -2,7 +2,8 @@ body {
   margin: 0;
   text-align: center;
   font-family: "Merriweather", serif;
-  color: #40514e;
+  color: #eeeeee;
+  background-color: #222831;
 }
 
 h1 {
@@ -20,7 +21,7 @@ h1 {
 }
 
 h2 {
-  color: #549696;
+  color: #00adb5;
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
   /*1rem is 16px*/
@@ -33,12 +34,12 @@ h2 {
 }
 
 h3 {
-  color: #11999e;
+  color: #00adb5;
   font-family: "Montserrat", sans-serif;
 }
 
 hr {
-  border: dotted #eaf6f6 6px;
+  border: dotted #393e46 6px;
   border-bottom: none;
   width: 4%;
   margin: 100px auto;
@@ -61,14 +62,14 @@ a:hover {
 }
 
 .copyright {
-  color: #eaf6f6;
-  font-size: 0.75rem;
+  color: #00adb5;
+  font-size: 14px;
   padding: 20px 0;
 }
 
 /* Navigation container */
 .navigation-container {
-  background-color: #dbe9b7;
+  background-color: #eeeeee;
   position: relative;
   padding-top: 60px;
   padding-bottom: 70px;
@@ -100,7 +101,7 @@ a:hover {
 
 .top-container {
   padding-top: 100px;
-  background-color: #dbe9b7;
+  background-color: #eeeeee;
   position: relative;
 }
 
@@ -112,7 +113,8 @@ a:hover {
 
 /* Bottom container */
 .bottom-container {
-  background-color: #66bfbf;
+  background-color: #eeeeee;
+  color: #222831;
   padding: 50px 0 20px;
 }
 
@@ -143,39 +145,46 @@ Top container */
   background-color: #c8e8ed;
 }
 
+.mountain-image {
+  position: relative;
+  bottom: -4px;
+}
+
 .radius-img {
   border-radius: 50%;
 }
 
+/* Skill row container */
 .skill-row {
+  display: flex;
+  justify-content: space-between;
   width: 50%;
   margin: 100px auto;
   text-align: left;
 }
 
-/* simon project */
-.skill-row a {
-  text-decoration: none;
-  position: relative;
-  left: 40px;
-  width: 20%;
+/* simon project styles  */
+.simon-link {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
-.more-width {
-  width: 53%;
-  padding-bottom: 20px;
+.simon-link img {
+  width: 100%;
+  margin-top: 5px;
 }
 
-.simon-img {
-  width: 25%;
-  float: left;
-  margin-right: 30px;
+.skill-description {
+  width: 70%;
+  margin-left: 20px;
+  margin-top: 10px;
 }
+
 
 .code-img {
-  width: 25%;
-  float: left;
-  margin-right: 30px;
+  width: 210px;
 }
 
 .computer-img {
@@ -243,7 +252,7 @@ Top container */
 
 .btn-email:active {
   transform: translateY(1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px #71c9ce;
 }
 
 /* using pseudo class ::after , and putting it behind the button element*/
@@ -261,20 +270,27 @@ Top container */
   z-index: -1;
   transition: all 0.4s;
 }
+
 .btn-email::after {
   background-color: #66bfbf;
 }
+
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
 
 .typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.12em solid #007880; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0; /* Adjust as needed */
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.12em solid #007880;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0;
+  /* Adjust as needed */
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
   animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
 }
@@ -284,6 +300,7 @@ Top container */
   from {
     width: 0;
   }
+
   to {
     width: 60%;
   }
@@ -291,10 +308,12 @@ Top container */
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
+
   from,
   to {
     border-color: transparent;
   }
+
   50% {
     border-color: #007880;
   }

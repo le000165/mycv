@@ -69,30 +69,25 @@ a:hover {
 
 /* Navigation container */
 .navigation-container {
+  display: flex;
+  justify-content: space-between;
   background-color: #eeeeee;
-  position: relative;
   padding-top: 60px;
   padding-bottom: 70px;
+}
+
+.navigation-link-container {
+  margin-right: 100px;
 }
 
 .navigation-link {
   color: #11999e;
   text-decoration: none;
-  position: relative;
-  left: 300px;
   font-size: 1.2rem;
 }
 
 .navigation-link:hover {
   color: #042526;
-}
-
-.navigation-container img {
-  width: 75px;
-  float: left;
-  position: relative;
-  bottom: 20px;
-  left: 200px;
 }
 
 .checked {
@@ -118,13 +113,32 @@ a:hover {
   padding: 50px 0 20px;
 }
 
-.fa {
-  padding: 20px;
-  font-size: 30px;
+.github {
+  font-size: 50px;
   width: 50px;
+  margin: 20px auto;
+  margin-top: 30px;
+  border-radius: 50%;
   text-align: center;
-  text-decoration: none;
 }
+
+.github a {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 100px;
+}
+
+.github i {
+  transition: all 0.4s ease-in-out;
+  border-radius: 50%;
+}
+
+.github i:hover {
+  color: #a2d0c1;
+  background-color: #2c061f;
+}
+
+
 
 /* 
 Top container */
@@ -141,8 +155,16 @@ Top container */
 }
 
 .profile-img {
-  width: 170px;
+  width: 75px;
+  margin-left: 5rem;
+  bottom: 20px;
+  position: relative;
   background-color: #c8e8ed;
+}
+
+.profile img {
+  margin: 60px auto;
+  width: 150px;
 }
 
 .mountain-image {
@@ -184,7 +206,9 @@ Top container */
 
 
 .code-img {
-  width: 210px;
+  width: 20%;
+  height: 20%;
+  margin: 10px auto;
 }
 
 .computer-img {
@@ -317,4 +341,66 @@ Top container */
   50% {
     border-color: #007880;
   }
+}
+
+/* Responsive on mobile */
+@media only screen and (max-width: 800px) {
+  b {
+    background-color: #71c9ce;
+  }
+
+  /* Profile Image */
+  .profile-img {
+    width: 120px;
+    margin: 0 auto;
+  }
+
+  .curly-braces {
+    font-size: 5.625rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  /* Navigation Bar*/
+  .navigation-container {
+    display: flex;
+  }
+
+  .profile-img {
+    display: inline-block;
+  }
+
+  /* Skills and description on mobile */
+  .skill-row {
+    flex-direction: column;
+    text-align: center;
+    margin: 70px auto;
+  }
+
+  .skill-description {
+    margin: 0 auto;
+    order: 2;
+    text-align: left;
+  }
+
+  .res-skill-imgs {
+    width: 120px;
+    height: 120px;
+    order: 1;
+    margin: 5px auto
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 75%;
+    }
+  }
+
 }

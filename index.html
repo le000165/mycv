@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Phong Programmer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/styles.css" />
   <link rel="shortcut icon" href="./Images/favicon.ico" />
   <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Rochester|Nunito" rel="stylesheet" />
@@ -13,10 +14,12 @@
 
 <body>
   <div class="navigation-container">
-    <img class="logo profile-img radius-img" src="Images/boy.png" alt="" />
-    <a class="navigation-link checked" href="#about">About</a>
-    <a class="navigation-link" href="#work">Work</a>
-    <a class="navigation-link" href="#note">Note</a>
+    <img class="profile-img radius-img" src="Images/boy.png" alt="" />
+    <div class="navigation-link-container">
+      <a class="navigation-link checked" href="#about">About</a>
+      <a class="navigation-link" href="#work">Work</a>
+      <a class="navigation-link" href="#note">Note</a>
+    </div>
   </div>
   <div class="top-container">
     <img class="top-cloud" src="Images/cloud.png" alt="cloud" />
@@ -32,21 +35,21 @@
       <img class="profile-img radius-img" src="Images/boy.png" alt="" />
       <h2>Hello</h2>
       <p class="intro">
-        I'm a web designer / developer based in Ottawa, Canada.I have a
-        passion for web design and love to create for web and mobile devices.
+        I'm a software developer based in Ottawa, Canada.I have a
+        passion for web design and love to create for web, mobile devices, and startup.
       </p>
     </div>
     <hr />
     <div id="work" class="skills">
       <h2>My Skills</h2>
       <div class="skill-row">
-        <img class="code-img" src="Images/code.png" alt="code-img" />
+        <img class="code-img res-skill-imgs" src="Images/code.png" alt="code-img" />
         <div class="skill-description">
           <h3>Design & Development</h3>
           <p>
-            I started learning to code when I was 12 years old because I wanted
-            to make my own video games. Over time, I have gained a wealth of
-            experience designing and developing mobile and web applications.
+            I started learning to code since the last couple years at Algonquin College, and self touch
+            . Over time, I have gained a wealth of
+            experience designing and developing software applications.
           </p>
         </div>
       </div>
@@ -58,14 +61,14 @@
             devices using the latest technologies available.
           </p>
         </div>
-        <img class="computer-img" src="Images/coding.png" alt="computer-img" />
+        <img class="computer-img res-skill-imgs" src="Images/coding.png" alt="computer-img" />
       </div>
     </div>
     <hr />
     <div id="work" class="skills">
       <h2>Projects</h2>
       <div class="skill-row">
-        <a class="simon-link"
+        <a class="simon-link res-skill-imgs"
           href="https://le000165.github.io/simon-1978-game/?fbclid=IwAR22ZeLOGLjO6LIA_-TPm2R3zuhoTt2dO1uvTq6Vwq3_ELLiYtR1Sppy9rQ"><img
             src="Images/simon.png" alt="code-img" /></a>
         <div class="skill-description">
@@ -88,13 +91,13 @@
           </p>
           <p> Click the icon to play the game and have fun ...</p>
         </div>
-        <a class="simon-link" href="https://le000165.github.io/rockpaper/"><img src="Images/rps.png"
+        <a class="simon-link res-skill-imgs" href="https://le000165.github.io/rockpaper/"><img src="Images/rps.png"
             alt="code-img" /></a>
       </div>
 
       <div class="skill-row">
-        <a class="simon-link" href="https://le000165.github.io/mouse-over-sketch/"><img src="Images/sketch.png"
-            alt="code-img" /></a>
+        <a class="simon-link res-skill-imgs" href="https://le000165.github.io/mouse-over-sketch/"><img
+            src="Images/sketch.png" alt="code-img" /></a>
         <div class="skill-description">
           <h3>Etch A Sketch</h3>
           <p>
@@ -119,10 +122,15 @@
   </div>
 
   <div class="bottom-container">
+
     <a class="footer-link" href="https://www.linkedin.com/in/the-dai-phong-le-96b167134/">LinkedIn</a>
     <a class="footer-link" href="https://twitter.com/thephongvtvt123">Twitter</a>
     <a class="footer-link" href="#">Website</a>
-    <p class="copyright">© 2021 Phong Le. All rights reserved.</p>
+    <div class="github">
+      <a href="https://github.com/le000165"><i class="fab fa-github"></i></a>
+    </div>
+    <p class="copyright">© 2021 Phong Le - All rights reserved.</p>
+
   </div>
 </body>
 

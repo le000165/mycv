@@ -1,8 +1,8 @@
 :root {
-  --common-background-color: #ddf3f5;
+  --common-background-color: #a2d0c1;
   --options-text-color: #222831;
   --link-hover: #41aea9;
-  --name-text-color: #03c4a1;
+  --name-text-color: #007965;
   --text-color: #e6f5ff;
   --h2-title-color: #00adb5;
   --h3-title-color: #28abb9;
@@ -39,6 +39,7 @@ h2 {
 }
 
 .under-name {
+  color: var(--name-text-color);
   font-size: 1.5rem;
 }
 
@@ -48,10 +49,10 @@ h3 {
 }
 
 hr {
-  border: dotted #393e46 6px;
+  border: dotted #707070 6px;
   border-bottom: none;
   width: 4%;
-  margin: 100px auto;
+  margin: 10rem auto;
 }
 
 p {
@@ -358,7 +359,7 @@ Top container */
 }
 
 /* Portrait and Landscape iphone X, Xs max*/
-@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-width: 450px) {
 
   /* =============== TOP Container ================ */
   h1 {
@@ -366,18 +367,18 @@ Top container */
   }
 
   .curly-braces {
-    font-size: 3.625rem;
+    font-size: 3rem;
   }
 
   .navigation-container img {
-    width: 5em;
-    height: 5em;
+    width: 4.5rem;
+    height: 4.5rem;
     left: -20px;
   }
 
   .navigation-link-container {
     margin: 0;
-    right: 2rem;
+    right: 0.2rem;
   }
 
   .navigation-link-container a {
@@ -403,6 +404,8 @@ Top container */
     position: relative;
     top: 5px;
   }
+
+
 
   /* ======= MIDDLE ======= */
   .profile-img {
@@ -438,6 +441,11 @@ Top container */
     width: 15rem;
   }
 
+  hr {
+    width: 2rem;
+    margin: 6rem auto;
+  }
+
   /* ========= BOTTOM CONTAINER  ========= */
   .contact-message {
     width: 23rem;
@@ -456,7 +464,7 @@ Top container */
     }
 
     to {
-      width: 90%;
+      width: 80%;
     }
   }
 

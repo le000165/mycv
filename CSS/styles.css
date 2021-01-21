@@ -71,13 +71,22 @@ a:hover {
 .navigation-container {
   display: flex;
   justify-content: space-between;
-  background-color: #eeeeee;
+  background-color: #fff3e6;
   padding-top: 60px;
   padding-bottom: 70px;
 }
 
+.navigation-container img {
+  background-color: #007880;
+  width: 80px;
+  position: relative;
+  left: 50px;
+  bottom: 20px;
+}
+
 .navigation-link-container {
-  margin-right: 100px;
+  position: relative;
+  right: 5rem;
 }
 
 .navigation-link {
@@ -96,7 +105,7 @@ a:hover {
 
 .top-container {
   padding-top: 100px;
-  background-color: #eeeeee;
+  background-color: #fff3e6;
   position: relative;
 }
 
@@ -108,24 +117,24 @@ a:hover {
 
 /* Bottom container */
 .bottom-container {
-  background-color: #eeeeee;
+  background-color: #fff3e6;
   color: #222831;
-  padding: 50px 0 20px;
+  padding: 50px 0 5px;
 }
 
 .github {
-  font-size: 50px;
-  width: 50px;
-  margin: 20px auto;
-  margin-top: 30px;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
   border-radius: 50%;
   text-align: center;
 }
 
 .github a {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 100px;
+  font-size: 3rem;
+  padding: 0;
 }
 
 .github i {
@@ -154,16 +163,8 @@ Top container */
   bottom: 300px;
 }
 
-.profile-img {
-  width: 75px;
-  margin-left: 5rem;
-  bottom: 20px;
-  position: relative;
-  background-color: #c8e8ed;
-}
-
 .profile img {
-  margin: 60px auto;
+  background-color: #007880;
   width: 150px;
 }
 
@@ -343,55 +344,98 @@ Top container */
   }
 }
 
-/* Responsive on mobile */
-@media only screen and (max-width: 800px) {
-  b {
-    background-color: #71c9ce;
-  }
+/* Portrait and Landscape iphone X, Xs max*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 
-  /* Profile Image */
-  .profile-img {
-    width: 120px;
-    margin: 0 auto;
+  /* =============== TOP Container ================ */
+  h1 {
+    font-size: 2rem;
   }
 
   .curly-braces {
-    font-size: 5.625rem;
+    font-size: 3.625rem;
   }
 
-  h1 {
-    font-size: 3rem;
+  .navigation-container img {
+    width: 5em;
+    height: 5em;
+    left: -20px;
   }
 
-  /* Navigation Bar*/
-  .navigation-container {
-    display: flex;
+  .navigation-link-container {
+    margin: 0;
+    right: 2rem;
   }
 
+  .navigation-link-container a {
+    font-size: 1.3rem;
+    padding: 0.5em;
+  }
+
+
+
+  /* ----- Images ------ */
+  .top-cloud {
+    width: 6rem;
+    left: 50px;
+  }
+
+  .bottom-cloud {
+    width: 6rem;
+    bottom: 160px;
+  }
+
+  .mountain-image {
+    width: 20rem;
+    position: relative;
+    top: 5px;
+  }
+
+  /* ======= MIDDLE ======= */
   .profile-img {
-    display: inline-block;
-  }
-
-  /* Skills and description on mobile */
-  .skill-row {
-    flex-direction: column;
-    text-align: center;
-    margin: 70px auto;
-  }
-
-  .skill-description {
+    width: 20px;
     margin: 0 auto;
-    order: 2;
-    text-align: left;
+  }
+
+  .intro {
+    width: 23rem;
+  }
+
+  .skill-row {
+    width: 23rem;
   }
 
   .res-skill-imgs {
-    width: 120px;
-    height: 120px;
-    order: 1;
-    margin: 5px auto
+    width: 10rem;
+    position: relative;
+    margin: auto 0;
   }
 
+  .computer-img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .code-img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .skill-description {
+    width: 15rem;
+  }
+
+  /* ========= BOTTOM CONTAINER  ========= */
+  .contact-message {
+    width: 23rem;
+  }
+
+  .github {
+    width: 3rem;
+    margin: 0.3em auto;
+  }
+
+  /* ======== TYPE WRITER  =========== */
   /* The typing effect */
   @keyframes typing {
     from {
@@ -399,8 +443,9 @@ Top container */
     }
 
     to {
-      width: 75%;
+      width: 90%;
     }
   }
 
+  /* ======= END OF MOBILE ======== */
 }

@@ -1,8 +1,18 @@
+:root {
+  --common-background-color: #ddf3f5;
+  --options-text-color: #222831;
+  --link-hover: #41aea9;
+  --name-text-color: #03c4a1;
+  --text-color: #e6f5ff;
+  --h2-title-color: #00adb5;
+  --h3-title-color: #28abb9;
+}
+
 body {
   margin: 0;
   text-align: center;
   font-family: "Merriweather", serif;
-  color: #eeeeee;
+  color: var(--text-color);
   background-color: #222831;
 }
 
@@ -21,10 +31,9 @@ h1 {
 }
 
 h2 {
-  color: #00adb5;
+  color: var(--h2-title-color);
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
-  /*1rem is 16px*/
   font-weight: normal;
   padding-bottom: 10px;
 }
@@ -34,7 +43,7 @@ h2 {
 }
 
 h3 {
-  color: #00adb5;
+  color: var(--h3-title-color);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -50,15 +59,18 @@ p {
 }
 
 a {
-  color: #11999e;
+  color: var(--options-text-color);
   text-decoration: none;
+  font-size: 1.2rem;
   padding: 10px 20px;
   font-family: "Montserrat", sans-serif;
   transition: all 0.5s ease 0s;
 }
 
 a:hover {
-  color: #042526;
+  color: var(--link-hover);
+  font-size: 1.3rem;
+
 }
 
 .copyright {
@@ -71,9 +83,15 @@ a:hover {
 .navigation-container {
   display: flex;
   justify-content: space-between;
-  background-color: #fff3e6;
+  background-color: var(--common-background-color);
   padding-top: 60px;
   padding-bottom: 70px;
+}
+
+.top-container {
+  padding-top: 100px;
+  background-color: var(--common-background-color);
+  position: relative;
 }
 
 .navigation-container img {
@@ -103,11 +121,7 @@ a:hover {
   color: #042526;
 }
 
-.top-container {
-  padding-top: 100px;
-  background-color: #fff3e6;
-  position: relative;
-}
+
 
 /* Middle container */
 
@@ -117,8 +131,7 @@ a:hover {
 
 /* Bottom container */
 .bottom-container {
-  background-color: #fff3e6;
-  color: #222831;
+  background-color: var(--common-background-color);
   padding: 50px 0 5px;
 }
 
@@ -270,7 +283,7 @@ Top container */
 
 .btn-email:hover {
   transform: translateY(-3px);
-  /* x y blur color */
+  color: #000000;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   background-color: #66bfbf;
 }
@@ -327,7 +340,7 @@ Top container */
   }
 
   to {
-    width: 60%;
+    width: 50%;
   }
 }
 
@@ -345,7 +358,7 @@ Top container */
 }
 
 /* Portrait and Landscape iphone X, Xs max*/
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
 
   /* =============== TOP Container ================ */
   h1 {

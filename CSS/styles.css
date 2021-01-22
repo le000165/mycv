@@ -364,7 +364,7 @@ Top container */
 }
 
 /* Portrait and Landscape iphone X, Xs max*/
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 430px) {
 
   /* =============== TOP Container ================ */
   h1 {
@@ -455,15 +455,23 @@ Top container */
     margin: 6rem auto;
   }
 
+
+
   /* ========= BOTTOM CONTAINER  ========= */
   .contact-message {
     width: 23rem;
   }
 
-  .github {
-    width: 3rem;
+  .bottom-container a {
+    font-size: 1rem;
+  }
+
+  .github a {
+    width: 3.3rem;
+    font-size: 3.3rem;
     margin: 0.3em auto;
   }
+
 
   /* ======== TYPE WRITER  =========== */
   /* The typing effect */
@@ -478,4 +486,176 @@ Top container */
   }
 
   /* ======= END OF MOBILE ======== */
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* =============== TOP Container ================ */
+
+  .navigation-link {
+    font-weight: bold;
+  }
+
+  body {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    height: 8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    width: 20rem;
+    margin: 0 auto;
+  }
+
+  .navigation-container img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  /* ----- Images ------ */
+  .top-cloud {
+    right: 8rem;
+  }
+
+  .curly-braces {
+    font-size: 7rem;
+  }
+
+  .bottom-cloud {
+    bottom: 14rem;
+    left: 5rem;
+  }
+
+  .mountain-image {
+    width: 30rem;
+    position: relative;
+    top: 0.4rem;
+  }
+
+  /* =============== MIDDLE CONTAINER ================ */
+
+  .intro {
+    width: 30rem;
+  }
+
+  .skill-row {
+    width: 45rem;
+  }
+
+  .res-skill-imgs {
+    width: 10rem;
+    margin: auto 0;
+  }
+
+  /* ============ BOTTOM CONTAINER ========== */
+  .contact-me h3,
+  .contact-me p {
+    width: 40rem;
+  }
+
+  /* ======== TYPE WRITER  =========== */
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 90%;
+    }
+  }
+
+  /* ======= END OF IPAD ======== */
+
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* =============== TOP Container ================ */
+
+  .navigation-link {
+    font-weight: bold;
+  }
+
+  body {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    height: 8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    width: 20rem;
+    /* margin: 0 auto; */
+  }
+
+  hr {
+    width: 2rem;
+  }
+
+  .navigation-container img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  /* ----- Images ------ */
+  .top-cloud {
+    right: 8rem;
+  }
+
+  .curly-braces {
+    font-size: 7rem;
+  }
+
+  .bottom-cloud {
+    bottom: 14rem;
+    left: 5rem;
+  }
+
+  .mountain-image {
+    width: 30rem;
+    position: relative;
+    top: 0.4rem;
+  }
+
+  /* =============== MIDDLE CONTAINER ================ */
+
+  .intro {
+    width: 30rem;
+  }
+
+  .skill-row {
+    width: 60rem;
+  }
+
+  .res-skill-imgs {
+    width: 10rem;
+    margin: auto 0;
+  }
+
+  /* ============ BOTTOM CONTAINER ========== */
+  .contact-me h3,
+  .contact-me p {
+    width: 40rem;
+  }
+
+  /* ======== TYPE WRITER  =========== */
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 60%;
+    }
+  }
+
+  /* ======= END OF IPAD ======== */
+
 }

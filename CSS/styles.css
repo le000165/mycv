@@ -75,7 +75,7 @@ a:hover {
 }
 
 .copyright {
-  color: #00adb5;
+  color: #184d47;
   font-size: 14px;
   padding: 20px 0;
 }
@@ -161,6 +161,11 @@ a:hover {
   background-color: #2c061f;
 }
 
+.contact-me h3 {
+  width: 23rem;
+  margin: 0 auto;
+}
+
 
 
 /* 
@@ -239,7 +244,7 @@ Top container */
   -moz-border-radius: 8;
   border-radius: 8px;
   font-family: Courier New;
-  color: #40514e;
+  color: #184d47;
   font-size: 24px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
@@ -371,9 +376,9 @@ Top container */
   }
 
   .navigation-container img {
-    width: 4.5rem;
-    height: 4.5rem;
-    left: -20px;
+    width: 4rem;
+    height: 4rem;
+    left: -10px;
   }
 
   .navigation-link-container {
@@ -430,11 +435,15 @@ Top container */
   .computer-img {
     width: 5rem;
     height: 5rem;
+    position: relative;
+    right: 0.5rem;
   }
 
   .code-img {
     width: 5rem;
     height: 5rem;
+    position: relative;
+    left: 0.5rem;
   }
 
   .skill-description {

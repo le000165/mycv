@@ -424,7 +424,7 @@ Top container */
   }
 
   .res-skill-imgs {
-    width: 10rem;
+    width: 7rem;
     position: relative;
     margin: auto 0;
   }
@@ -446,6 +446,7 @@ Top container */
   .skill-description {
     width: 15rem;
   }
+
 
   hr {
     width: 2rem;
@@ -486,6 +487,7 @@ Top container */
 }
 
 @media only screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* PORTRAIT ONLY */
   /* =============== TOP Container ================ */
 
   .navigation-link {
@@ -542,7 +544,7 @@ Top container */
   }
 
   .res-skill-imgs {
-    width: 10rem;
+    width: 12rem;
     margin: auto 0;
   }
 
@@ -572,6 +574,7 @@ Top container */
 
 }
 
+/* LANDSCAPE IPAD */
 @media only screen and (min-device-width: 480px) and (max-device-width: 1024px) and (orientation:landscape) {
   /* =============== TOP Container ================ */
 
@@ -635,7 +638,7 @@ Top container */
 
 
   .res-skill-imgs {
-    width: 10rem;
+    width: 12rem;
     margin: auto 0;
   }
 

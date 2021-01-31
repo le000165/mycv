@@ -97,7 +97,8 @@ a:hover {
 
 .navigation-container img {
   background-color: #007880;
-  width: 80px;
+  width: 4rem;
+  height: 4rem;
   position: relative;
   left: 50px;
   bottom: 20px;
@@ -121,8 +122,6 @@ a:hover {
 .checked {
   color: #042526;
 }
-
-
 
 /* Middle container */
 
@@ -200,7 +199,7 @@ Top container */
 .skill-row {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 50rem;
   margin: 100px auto;
   text-align: left;
 }

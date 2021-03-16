@@ -13,7 +13,7 @@ body {
   text-align: center;
   font-family: "Merriweather", serif;
   color: var(--text-color);
-  background-color: #222831;
+  background: #000000;
 }
 
 h1 {
@@ -69,9 +69,7 @@ a {
 }
 
 a:hover {
-  color: var(--link-hover);
-  font-size: 1.3rem;
-
+  color: var(--name-text-color);
 }
 
 .copyright {
@@ -113,10 +111,12 @@ a:hover {
   color: #11999e;
   text-decoration: none;
   font-size: 1.2rem;
+  border-bottom: 4px solid var(--common-background-color);
 }
 
 .navigation-link:hover {
-  color: #042526;
+  color: #007965;
+  border-bottom-color: #007965;
 }
 
 .checked {
@@ -165,20 +165,22 @@ a:hover {
   margin: 0 auto;
 }
 
-
-
 /* 
 Top container */
 .top-cloud {
   position: absolute;
-  right: 300px;
-  top: 40px;
+  right: 500px;
+  top: 20px;
+  animation: topCloudMoving 20s linear infinite;
+  animation-delay: 4s;
 }
 
 .bottom-cloud {
   position: absolute;
   left: 250px;
   bottom: 300px;
+  animation: bottomCloudMoving 20s linear infinite;
+  animation-delay: 4s;
 }
 
 .profile img {
@@ -196,12 +198,28 @@ Top container */
 }
 
 /* Skill row container */
+#work {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .skill-row {
   display: flex;
+  display: -webkit-flex;
   justify-content: space-between;
-  width: 50rem;
-  margin: 100px auto;
+  width: 60rem;
+  margin: 10rem auto;
+  padding: 10rem 2rem;
   text-align: left;
+  background: #000000;
+  border-top-left-radius: 8rem;
+  border-bottom-left-radius: 2rem;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* simon project styles  */
@@ -218,9 +236,16 @@ Top container */
 }
 
 .skill-description {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
   width: 70%;
   margin-left: 20px;
   margin-top: 10px;
+}
+
+.skill-description h3 {
+  font-size: 2rem;
 }
 
 .code-img {
@@ -235,30 +260,13 @@ Top container */
   margin-left: 30px;
 }
 
-.btn {
-  background: #63b7b7;
-  border: 1px solid #11999e;
-  -webkit-border-radius: 8;
-  -moz-border-radius: 8;
-  border-radius: 8px;
-  font-family: Courier New;
-  color: #184d47;
-  font-size: 24px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-  position: relative;
-  top: 30px;
-  transition: all 0.6s ease 0s;
-}
-
-.btn:hover {
-  background: #11999e;
-  text-decoration: none;
-}
-
 .contact-me {
-  line-height: 2;
   margin: 100px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 70rem;
+  justify-content: space-evenly;
 }
 
 .intro {
@@ -271,55 +279,23 @@ Top container */
   margin: 40px auto;
 }
 
-/* btn email */
-.btn-email:link,
-.btn-email:visited {
-  border: 0;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  display: inline-block;
-  border-radius: 100px;
-  transition: all 0.2s;
-  position: relative;
-  animation: moveInBottom 1s ease-out 0.9s;
-  animation-fill-mode: backwards;
+#btn-email {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 3rem;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border: 2px solid var(--h2-title-color);
+  color: var(--h2-title-color);
+  font-family: "Montserrat", sans-serif;
+  transition: all 150ms ease;
 }
 
-.btn-email:hover {
-  transform: translateY(-3px);
-  color: #000000;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  background-color: #66bfbf;
-}
-
-.btn-email:active {
-  transform: translateY(1px);
-  box-shadow: 0 5px 10px #71c9ce;
-}
-
-/* using pseudo class ::after , and putting it behind the button element*/
-.btn-email::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  /* references by the relative element which is the button */
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* define the postion of the button, one on top of another */
-  z-index: -1;
-  transition: all 0.4s;
-}
-
-.btn-email::after {
-  background-color: #66bfbf;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+#btn-email:hover {
+  background: var(--h2-title-color);
+  color: black;
 }
 
 .typewriter {
@@ -337,6 +313,8 @@ Top container */
   animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
+/* ======================== Animation ======================== */
+
 /* The typing effect */
 @keyframes typing {
   from {
@@ -347,6 +325,35 @@ Top container */
     width: 50%;
   }
 }
+
+/* cloud moving effect */
+@keyframes topCloudMoving {
+
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-600px);
+  }
+
+}
+
+@keyframes bottomCloudMoving {
+
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(800px);
+  }
+
+}
+
+
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
@@ -361,10 +368,15 @@ Top container */
   }
 }
 
-/* Portrait and Landscape iphone X, Xs max*/
+/* MOBILE - Portrait and Landscape iphone X, Xs max*/
 @media only screen and (max-width: 430px) {
 
+  body {
+    background: #f4f9f4;
+  }
+
   /* =============== TOP Container ================ */
+
   h1 {
     font-size: 2rem;
   }
@@ -373,10 +385,15 @@ Top container */
     font-size: 3rem;
   }
 
+  /* .navigation-container {
+    position: fixed;
+    width: 100%;
+  } */
+
   .navigation-container img {
-    width: 4rem;
-    height: 4rem;
-    left: -10px;
+    width: 3rem;
+    height: 3rem;
+    left: 0px;
   }
 
   .navigation-link-container {
@@ -385,19 +402,23 @@ Top container */
   }
 
   .navigation-link-container a {
-    font-size: 1.3rem;
-    padding: 0.5em;
+    font-size: 1rem;
+    font-weight: bold;
   }
 
   /* ----- Images ------ */
   .top-cloud {
     width: 6rem;
     left: 50px;
+    animation-delay: 2s;
+    animation: topCloudMoving 10s linear infinite;
   }
 
   .bottom-cloud {
     width: 6rem;
     bottom: 160px;
+    animation-delay: 2s;
+    animation: bottomCloudMoving 10s linear infinite;
   }
 
   .mountain-image {
@@ -405,8 +426,6 @@ Top container */
     position: relative;
     top: 5px;
   }
-
-
 
   /* ======= MIDDLE ======= */
   .profile-img {
@@ -416,43 +435,111 @@ Top container */
 
   .intro {
     width: 23rem;
+    color: #1b1717;
   }
 
+  /* ========= Skills Rows ======= */
+
   .skill-row {
-    width: 23rem;
+    color: #042526;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    margin: 10rem auto;
+    border-radius: 1.4rem;
+    padding: 3rem;
+
   }
 
   .res-skill-imgs {
-    width: 7rem;
-    position: relative;
-    margin: auto 0;
-  }
-
-  .computer-img {
-    width: 5rem;
-    height: 5rem;
-    position: relative;
-    right: 0.5rem;
-  }
-
-  .code-img {
-    width: 5rem;
-    height: 5rem;
-    position: relative;
-    left: 0.5rem;
+    order: 1;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    margin-top: 1rem;
   }
 
   .skill-description {
-    width: 15rem;
+    width: 100%;
+    margin: 0 auto;
+    order: 0;
   }
 
+  .skill-row h3 {
+    color: #184d47;
+  }
 
   hr {
     width: 2rem;
     margin: 6rem auto;
   }
 
+  /* Skills Box Colors */
+  .skill-mobile-1 {
+    color: #605a56;
+    background-color: #ffc1f3;
+    background-image: linear-gradient(0deg, #ffc1f3 0%, #ffefa1 90%);
+  }
 
+  .skill-mobile-1 h3 {
+    color: #000000;
+  }
+
+  .skill-mobile-2 {
+    color: #aaaaaa;
+    background-color: #0acf83;
+    background-image: linear-gradient(20deg, #0acf83 0%, #000000 30%);
+  }
+
+  .skill-mobile-2 h3 {
+    color: #fff;
+  }
+
+  .skill-mobile-3 {
+    color: #a98b98;
+    background-color: #b8b5ff;
+    background-image: linear-gradient(0deg, #b8b5ff 0%, #ffe8e8 40%);
+  }
+
+  .skill-mobile-3 h3 {
+    color: #351f39;
+  }
+
+  .skill-mobile-4 {
+    color: #7e7474;
+    background: #ee9ca7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .skill-mobile-4 h3 {
+    color: #000;
+  }
+
+
+  .skill-mobile-5 {
+    color: #d8ebe4;
+    background-color: #008891;
+    background-image: linear-gradient(0, #008891 30%, #153e90 100%);
+  }
+
+  .skill-mobile-5 h3 {
+    color: #fff;
+  }
+
+  .skill-mobile-6 {
+    color: #726a95;
+    background-color: #A770EF;
+    background-image: linear-gradient(50deg, #A770EF 0%, #ffe3fe 70%);
+  }
+
+  .skill-mobile-6 h3 {
+    color: #350b40;
+  }
 
   /* ========= BOTTOM CONTAINER  ========= */
   .contact-message {
@@ -480,6 +567,33 @@ Top container */
     to {
       width: 80%;
     }
+  }
+
+  /* cloud moving effect */
+  @keyframes topCloudMoving {
+
+    0%,
+    100% {
+      transform: translateX(80px);
+    }
+
+    50% {
+      transform: translateX(-40px);
+    }
+
+  }
+
+  @keyframes bottomCloudMoving {
+
+    0%,
+    100% {
+      transform: translateX(-80px);
+    }
+
+    50% {
+      transform: translateX(20px);
+    }
+
   }
 
   /* ======= END OF MOBILE ======== */
@@ -556,6 +670,8 @@ Top container */
   .contact-me p {
     width: 40rem;
   }
+
+
 
   /* ======== TYPE WRITER  =========== */
   /* The typing effect */

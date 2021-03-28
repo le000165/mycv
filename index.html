@@ -14,12 +14,12 @@
 
 <body>
   <div class="navigation-container">
-    <img class="profile-img radius-img" src="Images/boy.png" alt="" />
-    <div class="navigation-link-container">
-      <a class="navigation-link checked" href="#about">About</a>
-      <a class="navigation-link" href="#work">Work</a>
-      <a class="navigation-link" href="#note">Contact</a>
-    </div>
+    <img class="profile-img" src="Images/boy.png" alt="" />
+    <ul id="navigation-link-container">
+      <li><a class="navigation-link" href="#about">About</a></li>
+      <li><a class="navigation-link" href="#work">Work</a></li>
+      <li><a class="navigation-link" href="#note">Contact</a></li>
+    </ul>
   </div>
   <div class="top-container">
     <img class="top-cloud" src="Images/cloud.png" alt="cloud" />
@@ -32,7 +32,7 @@
   </div>
   <div class="middle-container">
     <div id="about" class="profile">
-      <img class="profile-img radius-img" src="Images/boy.png" alt="" />
+      <img class="profile-img" src="Images/boy.png" alt="" />
       <h2>Hello</h2>
       <p class="intro">
         I'm a software developer based in Ottawa, Canada. I have a
@@ -43,7 +43,7 @@
     <div id="work" class="skills">
       <h2>My Skills</h2>
       <div class="skill-row skill-mobile-1">
-        <img class="code-img res-skill-imgs" src="Images/code.png" alt="code-img" />
+        <img src="Images/code.png" alt="code-img" alt="clickable-image" width="300" height="300" />
         <div class="skill-description">
           <h3>Design & Development</h3>
           <p>
@@ -61,16 +61,18 @@
             devices using the latest technologies available.
           </p>
         </div>
-        <img class="computer-img res-skill-imgs" src="Images/coding.png" alt="computer-img" />
+        <img src="Images/coding.png" alt="unclickable-image" width="300" height="300" />
       </div>
     </div>
     <hr />
     <div id="work" class="skills">
       <h2>Projects</h2>
-      <div class="skill-row skill-mobile-3">
-        <a class="simon-link res-skill-imgs"
-          href="https://le000165.github.io/simon-1978-game/?fbclid=IwAR22ZeLOGLjO6LIA_-TPm2R3zuhoTt2dO1uvTq6Vwq3_ELLiYtR1Sppy9rQ"><img
-            src="Images/simon.png" alt="code-img" /></a>
+      <div id="test-1" class="skill-row skill-mobile-3">
+        <!-- class="simon-link res-skill-imgs" -->
+        <a
+          href="https://le000165.github.io/simon-1978-game/?fbclid=IwAR22ZeLOGLjO6LIA_-TPm2R3zuhoTt2dO1uvTq6Vwq3_ELLiYtR1Sppy9rQ">
+          <img src="Images/simon.png" alt="clickable-image" width="300" height="300">
+        </a>
         <div class="skill-description">
           <h3>Simple Simon Game</h3>
           <p>
@@ -91,15 +93,17 @@
           </p>
           <p> Click the icon to play the game and have fun.</p>
         </div>
-        <a class="simon-link res-skill-imgs" href="https://le000165.github.io/rockpaper/"><img src="Images/rps.png"
-            alt="code-img" /></a>
+        <a href="https://le000165.github.io/rockpaper/">
+          <img src="Images/rps.png" alt="clickable-image" width="300" height="300" />
+        </a>
       </div>
 
 
 
       <div class="skill-row skill-mobile-5">
-        <a class="simon-link res-skill-imgs" href="https://le000165.github.io/mouse-over-sketch/"><img
-            src="Images/sketch.png" alt="code-img" /></a>
+        <a href="https://le000165.github.io/mouse-over-sketch/">
+          <img src="Images/sketch.png" alt="code-img" alt="clickable-image" width="300" height="300" />
+        </a>
         <div class="skill-description">
           <h3>Etch A Sketch</h3>
           <p>
@@ -119,8 +123,9 @@
           </p>
           <p> Click the icon to play a math</p>
         </div>
-        <a class="simon-link res-skill-imgs" href="https://le000165.github.io/calculator/"><img
-            src="Images/calculator.png" alt="code-img" /></a>
+        <a href="https://le000165.github.io/calculator/">
+          <img src="Images/calculator.png" alt="code-img" alt="clickable-image" width="300" height="300" />
+        </a>
       </div>
     </div>
   </div>
@@ -137,15 +142,15 @@
   </div>
 
   <div class="bottom-container">
-
-    <a class="footer-link" href="https://www.linkedin.com/in/le000165/">LinkedIn</a>
-    <a class="footer-link" href="https://twitter.com/thephongvtvt123">Twitter</a>
-    <a class="footer-link" href="#">Website</a>
+    <ul>
+      <li> <a class="footer-link" href="https://www.linkedin.com/in/le000165/">LinkedIn</a></li>
+      <li><a class="footer-link" href="https://twitter.com/thephongvtvt123">Twitter</a></li>
+      <li><a class="footer-link" href="#">Website</a></li>
+    </ul>
     <div class="github">
       <a href="https://github.com/le000165"><i class="fab fa-github"></i></a>
     </div>
     <p class="copyright">© 2021 Phong Le - All rights reserved.</p>
-
   </div>
 </body>
 
